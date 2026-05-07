@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat awards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="awards-page" aria-labelledby="page-title">
+      <section class="intro">
+        <div class="brand" aria-label="chat awards">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>chat awards</span>
+        </div>
+
+        <h1 id="page-title">chat awards</h1>
+        <p class="lede">upload a WhatsApp export and host the most unnecessary ceremony ever</p>
+      </section>
+
+      <section class="panel setup-panel" id="setup-panel">
+        <form class="setup-form" id="setup-form">
+          <label>
+            <span>WhatsApp export</span>
+            <input id="chat-file" type="file" accept=".txt,text/plain" required />
+          </label>
+          <p class="status" id="parse-status">No chat loaded yet.</p>
+          <button class="button button-light" type="submit">Start Ceremony</button>
+        </form>
+      </section>
+
+      <section class="stage panel" id="stage" hidden aria-live="polite">
+        <div class="stage-topline">
+          <span id="award-count">award 1</span>
+          <span>jakublabs.xyz</span>
+        </div>
+
+        <p class="award-label">the award for</p>
+        <h2 id="award-title">award title</h2>
+        <p class="award-description" id="award-description">description</p>
+
+        <div class="nominees" id="nominees"></div>
+
+        <div class="reveal-card" id="reveal-card">
+          <p id="reveal-kicker">and the winner is...</p>
+          <strong id="winner-name">...</strong>
+          <span id="winner-stat"></span>
+        </div>
+
+        <button class="button button-light" id="next-award" type="button" disabled>
+          Reveal
+        </button>
+      </section>
+
+      <section class="panel recap-panel" id="recap-panel" hidden>
+        <p class="tools-kicker">recap</p>
+        <h2>tonight's winners</h2>
+        <div class="recap-list" id="recap-list"></div>
+        <button class="button button-light" id="restart" type="button">Run It Back</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
